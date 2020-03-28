@@ -4,7 +4,9 @@
   "description": "Full stack react app tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix client",
+    "server": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
   "dependencies": {
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
-    "pg": "^7.18.1"
+    "pg": "^7.18.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
   }
 }
